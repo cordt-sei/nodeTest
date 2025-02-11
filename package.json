@@ -1,11 +1,36 @@
 {
-  "name": "nodeTest",
+  "name": "sei-network-testing",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Comprehensive testing framework for Sei Network endpoints",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/",
+    "start:load": "node src/index.js --mode=load",
+    "start:exhaustive": "node src/index.js --mode=exhaustive",
+    "analyze": "node src/tools/analyzer.js"
+  },
+  "keywords": [
+    "sei",
+    "blockchain",
+    "testing",
+    "load-testing",
+    "cosmos",
+    "evm"
+  ],
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.9",
     "chalk": "^5.4.1",
-    "events": "^3.3.0"
+    "commander": "^11.1.0",
+    "dotenv": "^16.4.1",
+    "events": "^3.3.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0"
   }
 }
